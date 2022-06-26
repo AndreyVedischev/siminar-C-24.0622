@@ -23,5 +23,5 @@ bool DefTri(int[] arr)
     int a = arr[0];
     int b = arr[1];
     int c = arr[2];
-    return ((a + b) > c || (a + c) > b || (b + c) > a);   
+    return ((a + b) > c && (a + c) > b && (b + c) > a);   
 }
