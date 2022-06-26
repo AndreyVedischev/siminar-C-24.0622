@@ -5,7 +5,8 @@ Clear();
 int size = 3;
 int[] array = GetRandomArray(size);
 WriteLine($"[{String.Join(",",array)}]");
-WriteLine($"[{String.Join(",",DefTri(array))}]");
+string ansver = DefTri(array)? "Треугольник" : "Не треугольник";
+WriteLine($"{ansver}");
 
 int[] GetRandomArray(int size)
 {
