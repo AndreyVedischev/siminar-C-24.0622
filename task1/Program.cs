@@ -4,7 +4,7 @@ Clear();
 
 Write("Введите элементы массива через пробел: ");
 int[] array = GetArrayFromString(ReadLine());
-WriteLine($"[{String.Join(",",array)}]");
+WriteLine($"[{String.Join(",",array)}] -> [{String.Join(",",ReversArray1(array))}]");
 
 int[] GetArrayFromString(string arrayStr)
 {
