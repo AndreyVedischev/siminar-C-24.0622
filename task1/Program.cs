@@ -4,7 +4,10 @@ Clear();
 
 Write("Введите элементы массива через пробел: ");
 int[] array = GetArrayFromString(ReadLine());
-WriteLine($"[{String.Join(",",array)}] -> [{String.Join(",",ReversArray1(array))}]");
+WriteLine($"[{String.Join(",",array)}] -> [{String.Join(",",ReverseArray(array))}]");
+ReversArray1(array);
+WriteLine($"[{String.Join(",",array)}]");
+
 
 int[] GetArrayFromString(string arrayStr)
 {
@@ -19,13 +22,24 @@ int[] GetArrayFromString(string arrayStr)
 
 }
 
-int[] ReversArray1(int[] array)
+int[] ReverseArray(int[] array)
 {
     int[] result = new int[array.Length];
     for(int i = 0; i < array.Length; i++)
     {
-        result[i] = array[array.Length - i - 1];
+        result[i] = array[array.Length - i - 1];        
     }
     return result;
 
 }
+
+void ReversArray1(int[] array)
+{
+    for(int i = 0; i < array.Length/2; i++)
+    {
+        int k = array[i];
+        array[i] = array[array.Length - i - 1];
+        array[array.Length - i - 1] = k;
+    }
+}
+
